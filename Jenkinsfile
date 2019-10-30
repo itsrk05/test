@@ -6,7 +6,7 @@ pipeline {
                 docker { image 'maven:3-alpine' }
             }
             steps {
-                sh 'mvn --version'
+                bat "mvn --version"
             }
         }
         stage('Front-end') {
@@ -14,7 +14,7 @@ pipeline {
                 docker { image 'node:7-alpine' }
             }
             steps {
-                sh 'node --version'
+                bat "node --version"
             }
         }
     }
